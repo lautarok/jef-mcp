@@ -1,0 +1,29 @@
+{
+  "name": "jef-mcp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start:http": "npx tsx src/cmd/http/server.ts",
+    "start:mcp": "npx tsx src/cmd/mcp/server.ts",
+    "start:cron": "npx tsx src/cmd/mail_cron/cron.ts",
+    "database:migrate": "npx tsx src/cmd/database/migrate.ts",
+    "database:rollback": "npx tsx src/cmd/database/rollback.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/node": "^26.6.6",
+    "tsx": "^4.23.15"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.2",
+    "express": "^5.3.0",
+    "mailparser": "^3.15.0",
+    "node-pop3": "^0.15.5",
+    "zod": "^4.6.7"
+  }
+}
